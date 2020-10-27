@@ -2,12 +2,7 @@ import React from "react";
 import { Menu } from "antd";
 import { Link } from "react-router-dom";
 
-import {
-  MailOutlined,
-  AppstoreOutlined,
-  SettingOutlined,
-} from "@ant-design/icons";
-const { SubMenu } = Menu;
+import { MailOutlined, AppstoreOutlined } from "@ant-design/icons";
 
 type Props = {
   children: React.ReactNode;
@@ -23,28 +18,14 @@ export const Layout = ({ children }: Props) => {
     <div>
       <Menu onClick={handleClick} selectedKeys={[current]} mode="horizontal">
         <Menu.Item key="home" icon={<MailOutlined />}>
-          <Link to="/">Home</Link>
+          <Link to="/">Inicio</Link>
         </Menu.Item>
         <Menu.Item key="about" icon={<AppstoreOutlined />}>
-          <Link to="/about">About</Link>
+          <Link to="/about">Acerca</Link>
         </Menu.Item>
         <Menu.Item key="contact" icon={<AppstoreOutlined />}>
-          <Link to="/contact">Contact</Link>
+          <Link to="/contact">Contacto</Link>
         </Menu.Item>
-        {/* <SubMenu
-          key="SubMenu"
-          icon={<SettingOutlined />}
-          title="Navigation Three - Submenu"
-        >
-          <Menu.ItemGroup title="Item 1">
-            <Menu.Item key="setting:1">Option 1</Menu.Item>
-            <Menu.Item key="setting:2">Option 2</Menu.Item>
-          </Menu.ItemGroup>
-          <Menu.ItemGroup title="Item 2">
-            <Menu.Item key="setting:3">Option 3</Menu.Item>
-            <Menu.Item key="setting:4">Option 4</Menu.Item>
-          </Menu.ItemGroup>
-        </SubMenu> */}
         <Menu.Item key="alipay">
           <a
             href="http://anthondev.com/"
